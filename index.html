@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="李雨澎｜医学与生命科学科研简历">
+  <meta name="theme-color" content="#133a5e">
+  <title>李雨澎｜个人简历</title>
+  <style>
+    :root {
+      --ink: #14212f;
+      --muted: #5b6672;
+      --paper: #ffffff;
+      --ground: #f2f5f7;
+      --navy: #133a5e;
+      --blue: #1f6699;
+      --line: #dce4e9;
+      --soft-blue: #eaf3f8;
+      --gold: #d4983a;
+      --shadow: 0 20px 55px rgba(22, 45, 63, .1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--ground);
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--blue); }
+
+    .resume {
+      width: min(1160px, calc(100% - 32px));
+      margin: 40px auto;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 280px;
+      padding: 52px 56px 46px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 88% 15%, rgba(103, 184, 225, .28) 0 5%, transparent 5.2%),
+        radial-gradient(circle at 73% 88%, rgba(103, 184, 225, .16) 0 14%, transparent 14.2%),
+        linear-gradient(118deg, #102f4b 0%, #164d73 58%, #1f6699 100%);
+    }
+    .hero::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 44%;
+      height: 5px;
+      background: var(--gold);
+      content: "";
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #b7deef;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      font-size: clamp(40px, 6vw, 62px);
+      font-weight: 700;
+      letter-spacing: .06em;
+      line-height: 1.15;
+    }
+    .role { margin: 13px 0 27px; color: #d9edf6; font-size: 17px; }
+    .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 22px;
+      max-width: 750px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #edf8fc;
+    }
+    .contact-list li { display: flex; align-items: baseline; gap: 8px; }
+    .contact-list .label { color: #9fd2e9; font-size: 12px; font-weight: 700; letter-spacing: .05em; }
+    .contact-list a { text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 3px; }
+    .profile-photo {
+      position: absolute;
+      top: 54px;
+      right: 56px;
+      width: 122px;
+      height: 148px;
+      border: 3px solid rgba(255,255,255,.82);
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 10px 22px rgba(4, 25, 41, .22);
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .quick-nav {
+      display: flex;
+      gap: 8px 24px;
+      padding: 14px 56px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .quick-nav a:hover { color: var(--navy); }
+    .main { padding: 15px 56px 52px; }
+    section { padding-top: 34px; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin: 0 0 20px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: .04em;
+    }
+    .section-title::before {
+      width: 8px;
+      height: 26px;
+      flex: 0 0 8px;
+      background: var(--gold);
+      content: "";
+    }
+    .section-title span { color: #83919b; font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+
+    .timeline { position: relative; margin: 0; padding: 0; list-style: none; }
+    .timeline::before { position: absolute; top: 5px; bottom: 7px; left: 105px; width: 1px; background: var(--line); content: ""; }
+    .timeline li { position: relative; display: grid; grid-template-columns: 87px 1fr; gap: 37px; padding: 0 0 23px; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .period { color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: 14px; font-weight: 700; line-height: 1.5; }
+    .timeline li::after { position: absolute; top: 5px; left: 100px; width: 10px; height: 10px; border: 2px solid var(--blue); border-radius: 50%; background: #fff; content: ""; }
+    .timeline h3 { margin: -4px 0 2px; color: var(--ink); font-size: 16px; line-height: 1.5; }
+    .timeline p { margin: 0; color: var(--muted); }
+    .tag { display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px; color: var(--blue); background: var(--soft-blue); font-size: 12px; font-weight: 700; vertical-align: 1px; }
+
+    .two-column { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(270px, .72fr); gap: 50px; }
+    .paper-list, .project-list, .award-list { margin: 0; padding: 0; list-style: none; }
+    .paper-list li { position: relative; padding: 0 0 18px 25px; color: #31404b; }
+    .paper-list li:last-child { padding-bottom: 0; }
+    .paper-list li::before { position: absolute; top: 10px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); content: ""; }
+    .paper-list em { color: var(--muted); font-family: Georgia, "Times New Roman", serif; }
+    .paper-list a { color: var(--blue); text-decoration: underline; text-decoration-color: #bcd7e5; text-underline-offset: 2px; }
+    .note { color: var(--blue); font-size: 13px; font-weight: 700; white-space: nowrap; }
+
+    .project-list { counter-reset: project; }
+    .project-list li { position: relative; padding: 0 0 18px 38px; color: #34424d; counter-increment: project; }
+    .project-list li::before {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--navy);
+      content: counter(project);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .project-list li:last-child { padding-bottom: 0; }
+
+    .awards { padding: 27px 29px; border-top: 4px solid var(--gold); background: #f5f7f8; }
+    .awards .section-title { margin-bottom: 17px; font-size: 20px; }
+    .award-list li { position: relative; padding: 0 0 13px 19px; color: #394752; }
+    .award-list li:last-child { padding-bottom: 0; }
+    .award-list li::before { position: absolute; top: 9px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); content: ""; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .skill { padding: 18px 20px; border: 1px solid var(--line); border-radius: 3px; background: #fff; }
+    .skill h3 { margin: 0 0 7px; color: var(--navy); font-size: 15px; }
+    .skill p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+
+    footer { padding: 18px 56px; border-top: 1px solid var(--line); color: #7d8991; background: #fbfcfc; font-size: 12px; }
+    @media print {
+      @page { margin: 10mm; }
+      body { background: #fff; font-size: 11px; }
+      .resume { width: 100%; margin: 0; box-shadow: none; }
+      .hero { min-height: auto; padding: 28px 32px; }
+      .main { padding: 0 32px 28px; }
+      .quick-nav { padding: 8px 32px; }
+      .profile-photo { top: 28px; right: 32px; width: 86px; height: 104px; }
+      section { padding-top: 20px; break-inside: avoid; }
+      .section-title { margin-bottom: 12px; font-size: 17px; }
+      .two-column { gap: 30px; }
+      footer { padding: 10px 32px; }
+    }
+    @media (max-width: 760px) {
+      .resume { width: 100%; margin: 0; box-shadow: none; }
+      .hero { min-height: 0; padding: 42px 26px 34px; }
+      .profile-photo { top: 36px; right: 24px; width: 70px; height: 86px; }
+      h1 { padding-right: 78px; font-size: 39px; }
+      .role { max-width: 250px; font-size: 15px; }
+      .contact-list { display: grid; gap: 7px; font-size: 13px; }
+      .quick-nav { padding: 13px 26px; }
+      .main { padding: 7px 26px 38px; }
+      .two-column, .skills-grid { grid-template-columns: 1fr; gap: 26px; }
+      .timeline::before { left: 89px; }
+      .timeline li { grid-template-columns: 72px 1fr; gap: 28px; }
+      .timeline li::after { left: 84px; }
+      .timeline h3 { font-size: 15px; }
+      .awards { padding: 23px 22px; }
+      footer { padding: 16px 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <header class="hero">
+      <p class="eyebrow">Curriculum Vitae · Medicine &amp; Life Sciences</p>
+      <h1>李雨澎</h1>
+      <p class="role">医学与生命科学科研人员 · 博士在读</p>
+      <ul class="contact-list" aria-label="联系方式">
+        <li><span class="label">EMAIL</span><a href="mailto:liyp25@mails.jlu.edu.cn">liyp25@mails.jlu.edu.cn</a></li>
+        <li><span class="label">PHONE</span><a href="tel:15947904009">15947904009</a></li>
+        <li><span class="label">BORN</span><span>1998.06 · 吉林省吉林市 · 中共党员</span></li>
+      </ul>
+      <img class="profile-photo" src="photo.jpg" alt="李雨澎证件照">
+    </header>
+
+    <nav class="quick-nav" aria-label="页面导航">
+      <a href="#experience">经历</a>
+      <a href="#publications">学术成果</a>
+      <a href="#projects">参研项目</a>
+      <a href="#awards">获得奖项</a>
+      <a href="#skills">掌握技能</a>
+    </nav>
+
+    <div class="main">
+      <section id="experience">
+        <h2 class="section-title">教育与工作经历 <span>EXPERIENCE</span></h2>
+        <ol class="timeline">
+          <li>
+            <time class="period">2025.09—至今</time>
+            <div><h3>吉林大学第一医院转化研究院 · 细胞命运实验室 <span class="tag">博士在读</span></h3></div>
+          </li>
+          <li>
+            <time class="period">2023.12—2025.09</time>
+            <div><h3>吉林大学第一医院转化研究院 · 肿瘤精准医学实验室 <span class="tag">科研助理</span></h3></div>
+          </li>
+          <li>
+            <time class="period">2020.09—2023.06</time>
+            <div><h3>北华大学 · 免疫学 <span class="tag">硕士</span></h3></div>
+          </li>
+          <li>
+            <time class="period">2016.09—2020.06</time>
+            <div><h3>吉林医药学院 · 医学检验技术 <span class="tag">学士</span></h3></div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="publications">
+        <h2 class="section-title">学术成果 <span>PUBLICATIONS</span></h2>
+        <ul class="paper-list">
+          <li>Runhong Mu, <strong>Yupeng Li</strong>, Yunhe Cui, Chuanbo Feng, Tingyu Li, Tengda Liu, Mingzhu Chang, Xiao Guo, Xingcheng Yi. Synergistic effects of ginsenoside Rb1 and peroxiredoxin 6 in enhancing myocardial injury treatment through anti-inflammatory, anti-oxidative, and anti-apoptotic mechanisms. <em>Journal of Ginseng Research</em>, 2024. <a href="https://doi.org/10.1016/j.jgr.2024.11.003" target="_blank" rel="noreferrer">DOI</a> <span class="note">IF 6.83 · 一区 · 导师共同一作</span></li>
+          <li><strong>Li Yu-Peng</strong>, Lin Rui, Chang Ming-Zhu, et al. The Effect of GPX2 on the Prognosis of Lung Adenocarcinoma Diagnosis and Proliferation, Migration, and Epithelial Mesenchymal Transition. <em>Journal of Oncology</em>, 2022, 7379157. <span class="note">IF 3.216 · 三区一作</span></li>
+          <li><strong>Li, Y.</strong>, Liu, Y., Chang, M., et al. Effect of RNAi-Mediated Survivin and Hypoxia-Inducible Factor-1α Gene Silencing on Proliferation, Invasion, Migration and Apoptosis of Gastric Cancer BGC-823 Cells. <em>Molecular Biotechnology</em>, 2023. <a href="https://doi.org/10.1007/s12033-023-00786-z" target="_blank" rel="noreferrer">DOI</a> <span class="note">IF 2.60 · 四区一作</span></li>
+          <li>Runhong Mu, <strong>Yupeng Li</strong>, Jiaying Xing, et al. Effect of lentivirus-mediated peroxiredoxins 6 gene silencing on the phenotype of human gastric cancer BGC-823 cells. <em>Journal of Cancer Research and Therapeutics</em>, 2022. <span class="note">IF 1.30 · 四区 · 导师共同一作</span></li>
+          <li>Runhong Mu, Siping Ye, Rui Lin, <strong>Yupeng Li</strong>, et al. Effects of Peroxiredoxin 6 and Its Mutants on the Isoproterenol Induced Myocardial Injury in H9C2 Cells and Rats. <em>Oxidative Medicine and Cellular Longevity</em>, 2022. <span class="note">IF 6.874 · 二区</span></li>
+        </ul>
+      </section>
+
+      <section class="two-column">
+        <div id="projects">
+          <h2 class="section-title">参研项目 <span>PROJECTS</span></h2>
+          <ol class="project-list">
+            <li>硕士论文：<strong>人参皂苷 Rb1 联合 PRDX6 对心肌损伤的干预及保护作用研究</strong></li>
+            <li>紫杉醇联合姜黄素对 Prdx6 调控在肝癌增殖中的作用，北华大学研究生创新计划重点资助项目（2021019），<strong>主持</strong>。</li>
+            <li>幽门螺杆菌快速检测试剂开发与应用的研究，吉林省卫健委卫生与健康创项目（Grant No. 2020J024），参与。</li>
+            <li>基于聚多巴胺材料建立幽门螺旋杆菌智能化数据库体系，北华大学研究生创新计划重点资助项目（2022017），参与。</li>
+            <li>系列动植物中药材炮制工艺及品质鉴定技术的研究（20210204185YY），吉林省科技厅项目，参与。</li>
+            <li>Prdx6 过表达对肝癌细胞生物学行为的影响及机制研究（2021022），北华大学研创重点资助项目，参与。</li>
+          </ol>
+        </div>
+
+        <aside class="awards" id="awards">
+          <h2 class="section-title">获得奖项 <span>AWARDS</span></h2>
+          <ul class="award-list">
+            <li>国家奖学金一次</li>
+            <li>校级一等学业奖学金一次、二等学业奖学金一次</li>
+            <li>吉林省“优秀硕士论文”</li>
+            <li>校级“优秀毕业研究生”“优秀硕士论文”</li>
+            <li>吉林省科技进步三等奖，第六名</li>
+            <li>吉林省科技厅演讲比赛三等奖</li>
+            <li>北华大学第八届“互联网+”大学生创新创业大赛研究生组校级金奖（主持）</li>
+            <li>北华大学第八届“互联网+”大学生创新创业大赛研究生组校级银奖（第二名）</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">掌握技能 <span>SKILLS</span></h2>
+        <div class="skills-grid">
+          <article class="skill">
+            <h3>科研实验</h3>
+            <p>细胞培养、动物建模、H&amp;E 染色、Masson 染色、免疫组化、ELISA、PCR、蛋白印迹、胶体金、网络药理学、二代测序及分子动力学模拟。</p>
+          </article>
+          <article class="skill">
+            <h3>语言能力</h3>
+            <p>已通过大学英语六级，具备良好的英语阅读与写作能力。</p>
+          </article>
+          <article class="skill">
+            <h3>数据与办公</h3>
+            <p>已通过计算机二级考试，熟练使用 SPSS、Prism、Adobe Illustrator（AI）及 Origin。</p>
+          </article>
+          <article class="skill">
+            <h3>协作素养</h3>
+            <p>沟通与社交能力良好，具备团队合作精神，做事踏实认真。</p>
+          </article>
+        </div>
+      </section>
+    </div>
+    <footer>© 李雨澎 · 个人学术简历</footer>
+  </main>
+</body>
+</html>
